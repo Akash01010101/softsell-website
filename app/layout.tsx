@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
+import { ChatWidget } from "@/components/chat-widget"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -37,11 +38,13 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="https://bcassetcdn.com/public/blog/wp-content/uploads/2022/11/09184213/software-company-cube-by-mypen-brandcrowd.png" type="image/svg+xml" />
+        <link rel="icon" href="https://bcassetcdn.com/public/blog/wp-content/uploads/2022/11/09184213/software-company-cube-by-mypen-brandcrowd.png" />
       </head>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           {children}
+          <ChatWidget />
         </ThemeProvider>
       </body>
     </html>
